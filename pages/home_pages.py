@@ -8,10 +8,13 @@ class HomePages:
         self.video_instruction=(By.CSS_SELECTOR, '#app > div > div.home-content > div > div > div > div > div.home__education > div.home__education-page > div > div.home-card.pointer')
         self.btn_fullscreen=(By.CSS_SELECTOR, '#app > div > div.home-instruction > div > div.home-instruction__content-main > div > div > div.video-player-proweb__controlls > div.video-player-proweb__controllers > div.video-player-proweb__controllers-right > button:nth-child(5)')
         self.press_video=(By.CSS_SELECTOR, '#app > div > div.home-instruction > div > div.home-instruction__content-main > div > div > div.video-player-proweb__actinview')
-        self.btn_pause=(By.CSS_SELECTOR, '#app > div > div.home-instruction > div > div.home-instruction__content-main > div > div > div.video-player-proweb__controlls > div.video-player-proweb__controllers > div.video-player-proweb__controllers-left > button.video-player-proweb__controllers-play')
-        self.fullscreen_exit=(By.CSS_SELECTOR, '#app > div > div.home-instruction > div > div.home-instruction__content-main > div > div > div.video-player-proweb__controlls.video-player-proweb__controlls-hidden > div.video-player-proweb__controllers > div.video-player-proweb__controllers-right > button:nth-child(5) > span')
+        self.btn_pause=(By.CSS_SELECTOR, '#app > div > div.home-instruction > div > div.home-instruction__content-main > div > div > div.video-player-proweb__controlls.video-player-proweb__controlls-hidden > div.video-player-proweb__controllers > div.video-player-proweb__controllers-left > button.video-player-proweb__controllers-play')
+##app > div > div.home-instruction > div > div.home-instruction__content-main > div > div > div.video-player-proweb__controlls.video-player-proweb__controlls-hidden > div.video-player-proweb__controllers > div.video-player-proweb__controllers-left > button.video-player-proweb__controllers-play
+        self.fullscreen_exit=(By.CSS_SELECTOR, '#app > div > div.home-instruction > div > div.home-instruction__content-main > div > div > div.video-player-proweb__controlls > div.video-player-proweb__controllers > div.video-player-proweb__controllers-right > button:nth-child(5) > span')
+        ##app > div > div.home-instruction > div > div.home-instruction__content-main > div > div > div.video-player-proweb__controlls > div.video-player-proweb__controllers > div.video-player-proweb__controllers-right > button:nth-child(5)
         self.logo=(By.CSS_SELECTOR, '#app > div > div.header > nav > div.header__logo > div > a > h2')
         self.group_card=(By.CSS_SELECTOR, '#app > div > div.home-content > div > div > div > div > div.home__education > div.home__education-page > div > div:nth-child(2)')
+        self.coworking_section = (By.CSS_SELECTOR, '#app > div > div.layout > div > div.material-dialog__window > div > ul > li:nth-child(3)')
         self.profile_icon=(By.CSS_SELECTOR, '#app > div > div.header > div > div.header__avatar > div')
         self.btn_exit=(By.CSS_SELECTOR, '#app > div > div.inforation > div > div > div:nth-child(4) > div')
         self.btn_confirm_exit=(By.CSS_SELECTOR, '#dialog > div > div > div.material-dialog__window-actions > button:nth-child(2)')
@@ -44,6 +47,10 @@ class HomePages:
     def click_group_card(self):
         wait = WebDriverWait(self.driver, 10)
         wait.until(EC.element_to_be_clickable(self.group_card)).click()
+
+    def click_coworking_section(self):
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(EC.element_to_be_clickable(self.coworking_section)).click()
 
     def click_profile_icon(self):
         wait = WebDriverWait(self.driver, 10)

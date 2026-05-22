@@ -4,6 +4,7 @@ from time import sleep
 from pages.auth_page import AuthPage
 from pages.home_pages import HomePages
 from pages.lessons_page import LessonsPage
+from pages.coworking_page import CoworkingPage
 
 def test_chrome(driver_chrome):
     driver_chrome.get("https://my.proweb.uz/log-in?q=/home")
@@ -24,39 +25,92 @@ def test_chrome(driver_chrome):
         pass
 
     home_pages= HomePages(driver_chrome)
-    home_pages.click_video_instruction()
-    time.sleep(2)
-    home_pages.click_btn_fullscreen()
-    time.sleep(10)
-    home_pages.click_press_video()
-    time.sleep(2)
-    home_pages.click_btn_pause()
-    time.sleep(2)
-    home_pages.click_fullscreen_exit()
-    time.sleep(2)
-    home_pages.click_logo()
-    time.sleep(2)
-    home_pages.click_group_card()
+    # home_pages.click_video_instruction()
+    # time.sleep(2)
+    # home_pages.click_btn_fullscreen()
+    # time.sleep(10)
+    # home_pages.click_press_video()
+    # time.sleep(2)
+    # home_pages.click_btn_pause()
+    # time.sleep(2)
+    # home_pages.click_fullscreen_exit()
+    # time.sleep(2)
+    # home_pages.click_logo()
+    # time.sleep(2)
+    # home_pages.click_group_card()
+    # time.sleep(2)
+    #
+    # lessons_page = LessonsPage(driver_chrome)
+    #
+    # lessons_page.click_btn_lessons()
+    # time.sleep(2)
+    # lessons_page.click_lesson_card()
+    # time.sleep(2)
+    # lessons_page.click_btn_play_video()
+    # time.sleep(2)
+    # lessons_page.click_btn_fullscreen()
+    # time.sleep(10)
+    # lessons_page.click_press_video()
+    # time.sleep(2)
+    # lessons_page.click_btn_pause()
+    # time.sleep(2)
+    # lessons_page.click_fullscreen_exit()
+    # time.sleep(2)
+    # lessons_page.click_btn_back()
+    # time.sleep(2)
+
+    home_pages.click_coworking_section()
     time.sleep(2)
 
-    lessons_page = LessonsPage(driver_chrome)
+    coworking_page = CoworkingPage(driver_chrome)
+    coworking_page.click_btn_cw_sign_up()
+    time.sleep(2)
+    coworking_page.click_chb_filial()
+    time.sleep(2)
+    coworking_page.click_chb_room()
+    time.sleep(2)
 
-    lessons_page.click_btn_lessons()
+    coworking_page.click_btn_select()
     time.sleep(2)
-    lessons_page.click_lesson_card()
+
+    coworking_page.click_btn_date()
     time.sleep(2)
-    lessons_page.click_btn_play_video()
+
+    coworking_page.click_group_choose()
     time.sleep(2)
-    lessons_page.click_btn_fullscreen()
-    time.sleep(10)
-    lessons_page.click_press_video()
+
+    coworking_page.click_chb_select_group()
     time.sleep(2)
-    lessons_page.click_btn_pause()
+
+    coworking_page.click_btn_select_group()
     time.sleep(2)
-    lessons_page.click_fullscreen_exit()
+
+    coworking_page.click_time_choose()
     time.sleep(2)
-    lessons_page.click_btn_back()
+
+    coworking_page.click_btn_time_choose()
     time.sleep(2)
+
+    coworking_page.click_place_choose()
+    time.sleep(2)
+
+    coworking_page.click_chb_place()
+    time.sleep(2)
+
+    coworking_page.click_btn_place_choose()
+    time.sleep(2)
+
+    coworking_page.click_btn_send()
+    time.sleep(2)
+
+    coworking_page.click_btn_cancel()
+    time.sleep(2)
+
+    coworking_page.click_btn_confirm_cancel()
+    time.sleep(2)
+
+
+
 
     home_pages.click_profile_icon()
     time.sleep(2)
